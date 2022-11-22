@@ -4,8 +4,7 @@ function Reader() {
   /* When qr code get an result */
   let done=(result,qrScanner)=>{
     setResultTxt([result,...resultTxt])
-  
-    
+  alert(resultTxt)
     console.log(result)
    
     setButton(<button className='p-2 m-2 rounded primary-bg secondary-text' onClick={()=>qrScanner.stop()}>Stop</button>)
