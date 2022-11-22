@@ -5,15 +5,16 @@ function Reader() {
   let done=(result,qrScanner)=>{
     setResultTxt(result)
     setButton(resultTxt)
-    setButton(<button className='p-2 m-2 rounded primary-bg secondary-text' onClick={scan}>Scan Now</button>)
+    
     console.log(result)
-    qrScanner.stop()
+   
+    setButton(<button className='p-2 m-2 rounded primary-bg secondary-text' onClick={()=>qrScanner.stop()}>Stop</button>)
 
   }
   /* starting the scan */
 let scan=()=>{
 setStarted(true)
-
+setButton("")
   let video=document.getElementById("qr")
   const qrScanner = new QrScanner(
     video,
