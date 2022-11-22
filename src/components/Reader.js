@@ -44,7 +44,7 @@ return (
     <div>
      {resultTxt!=""?resultTxt.map((r)=>{
 return (
-<h1>r</h1>
+<h1>{r}</h1>
 )
      }):null}
     </div>
