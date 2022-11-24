@@ -41,7 +41,7 @@ return (
       <video id="qr" className='  md:w-2/4 md:h-full    mx-auto'  ></video>
     </div>
 
-    <div className='w-full absolute font-semibold text-sm overflow-x-scroll mx-auto my-12 bg-gray-200'>
+    <div className='w-full absolute font-semibold text-sm overflow-x-scroll bottom-0 bg-gray-200'>
      {resultTxt.length!=1?resultTxt.map((r)=>{
 return (
 <h1 className='my-4'>{r}</h1>
