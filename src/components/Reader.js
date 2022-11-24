@@ -29,7 +29,7 @@ setButton("")
     qrScanner.start()
 }
 /* to change scannow button to scanning when scan started */
-const [button,setButton]=useState( <button className='p-2  z-20 rounded primary-bg secondary-text' onClick={scan}>Scan Now</button>)
+const [button,setButton]=useState( <button className='p-2 m-40 z-20 rounded primary-bg secondary-text' onClick={scan}>Scan Now</button>)
   console.log(load)
 useEffect(()=>{
   console.log(resultTxt)
