@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import QrScanner from 'qr-scanner';
+import load from './load.gif';
 function Reader() {
     /* use states */
   /* strated useState used to identify the scanning is started */
@@ -28,19 +29,22 @@ setButton("")
     qrScanner.start()
 }
 /* to change scannow button to scanning when scan started */
-const [button,setButton]=useState( <button className='p-2 m-2 rounded primary-bg secondary-text' onClick={scan}>Scan Now</button>)
-  
+const [button,setButton]=useState( <button className='p-2 m-32 z-10 rounded primary-bg secondary-text' onClick={scan}>Scan Now</button>)
+  console.log(load)
 useEffect(()=>{
   console.log(resultTxt)
 })
+
 return (
     <div>
-      <div className='container w-full h-full mx-auto text-center'>
+      <div className='container  w-full h-full mx-auto text-center'>
         <h1 className='text-xl font-mono my-4'>QR Scanner</h1>
         <div className=''>
+        <img className="absolute w-3/4" src={load} alt="load"></img>
       <video id="qr" className='  md:w-2/4 md:h-full    mx-auto'  ></video>
     </div>
-
+    
+   
     <div className='w-full absolute font-semibold text-sm overflow-x-scroll bottom-0 bg-gray-200'>
      {resultTxt.length!=1?resultTxt.map((r)=>{
 return (
