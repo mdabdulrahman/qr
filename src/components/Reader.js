@@ -40,7 +40,7 @@ return (
       <div className='container  w-full h-full mx-auto text-center'>
         <h1 className='text-xl font-mono my-4'>QR Scanner</h1>
         <div className=''>
-        <img className="absolute w-3/4" src={load} alt="load"></img>
+        <img className="absolute w-3/4 z-10" src={load} alt="load"></img>
       <video id="qr" className='  md:w-2/4 md:h-full    mx-auto'  ></video>
     </div>
     
