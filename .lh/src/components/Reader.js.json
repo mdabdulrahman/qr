@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/components/Reader.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1669296025280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1669296244266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,12 @@\n import React,{useState,useEffect} from 'react'\r\n import QrScanner from 'qr-scanner';\r\n function Reader() {\r\n+    /* use states */\r\n+  /* strated useState used to identify the scanning is started */\r\n+  const [started,setStarted]=useState(false)\r\n+  \r\n+  const [resultTxt,setResultTxt]=useState([\"\"])\r\n   /* When qr code get an result */\r\n   let done=(result,qrScanner)=>{\r\n     setResultTxt(resultTxt.push(result))\r\n  qrScanner.pause()\r\n"
+                },
+                {
+                    "date": 1669296251950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,10 @@\n     // No options provided. This will use the old api and is deprecated in the current version until next major version.\r\n     );\r\n     qrScanner.start()\r\n }\r\n-\r\n+/* to change scannow button to scanning when scan started */\r\n+const [button,setButton]=useState( <button className='p-2 m-2 rounded primary-bg secondary-text' onClick={scan}>Scan Now</button>)\r\n   \r\n useEffect(()=>{\r\n   console.log(resultTxt)\r\n })\r\n"
+                },
+                {
+                    "date": 1669296701729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   \r\n   const [resultTxt,setResultTxt]=useState([\"\"])\r\n   /* When qr code get an result */\r\n   let done=(result,qrScanner)=>{\r\n-    setResultTxt([])\r\n+    setResultTxt([re])\r\n  qrScanner.pause()\r\n     console.log(resultTxt)\r\n     console.log(resultTxt.length!=1)\r\n    \r\n"
+                },
+                {
+                    "date": 1669298072589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n         \r\n       <video id=\"qr\" className=' rounded-md md:w-2/4 md:h-full    mx-auto'  ></video>\r\n     \r\n \r\n-    <div class>\r\n+    <div classN>\r\n      {resultTxt.length!=1?resultTxt.map((r)=>{\r\n return (\r\n <h1>{r}</h1>\r\n )\r\n"
+                }
+            ],
+            "date": 1669296025280,
+            "name": "Commit-0",
+            "content": "import React,{useState,useEffect} from 'react'\r\nimport QrScanner from 'qr-scanner';\r\nfunction Reader() {\r\n  /* When qr code get an result */\r\n  let done=(result,qrScanner)=>{\r\n    setResultTxt(resultTxt.push(result))\r\n qrScanner.pause()\r\n    console.log(resultTxt)\r\n    console.log(resultTxt.length!=1)\r\n   \r\n    setButton(<button className='p-2 m-2 rounded primary-bg secondary-text' onClick={()=>qrScanner.stop()}>Stop</button>)\r\n\r\n  }\r\n  /* starting the scan */\r\nlet scan=()=>{\r\nsetStarted(true)\r\nsetButton(\"\")\r\n  let video=document.getElementById(\"qr\")\r\n  const qrScanner = new QrScanner(\r\n    video,\r\n    result => done(result,qrScanner),\r\n    // No options provided. This will use the old api and is deprecated in the current version until next major version.\r\n    );\r\n    qrScanner.start()\r\n}\r\n\r\n  \r\nuseEffect(()=>{\r\n  console.log(resultTxt)\r\n})\r\nreturn (\r\n    <div>\r\n      <div className='container w-3/4 h-2/4 mx-auto text-center'>\r\n        <h1 className='text-xl font-mono my-6'>QR Scanner</h1>\r\n        \r\n      <video id=\"qr\" className=' rounded-md md:w-2/4 md:h-full    mx-auto'  ></video>\r\n    \r\n\r\n    <div>\r\n     {resultTxt.length!=1?resultTxt.map((r)=>{\r\nreturn (\r\n<h1>{r}</h1>\r\n)\r\n     }):resultTxt[0]}\r\n    </div>\r\n    {button}\r\n</div>\r\n    </div>\r\n  )\r\n}\r\nexport default Reader"
+        }
+    ]
+}

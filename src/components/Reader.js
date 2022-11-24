@@ -1,13 +1,18 @@
 import React,{useState,useEffect} from 'react'
 import QrScanner from 'qr-scanner';
 function Reader() {
+    /* use states */
+  /* strated useState used to identify the scanning is started */
+  const [started,setStarted]=useState(false)
+  
+  const [resultTxt,setResultTxt]=useState([""])
   /* When qr code get an result */
   let done=(result,qrScanner)=>{
     setResultTxt([result,...resultTxt])
-  alert(...resultTxt)
-    console.log(result)
+    console.log(resultTxt)
+    console.log(resultTxt.length!=1)
    
-    setButton(<button className='p-2 m-2 rounded primary-bg secondary-text' onClick={()=>qrScanner.stop()}>Stop</button>)
+    /* setButton(<button className='p-2 m-2 rounded primary-bg secondary-text' onClick={()=>qrScanner.stop()}>Stop</button>) */
 
   }
   /* starting the scan */
@@ -22,12 +27,8 @@ setButton("")
     );
     qrScanner.start()
 }
-  /* use states */
-  /* strated useState used to identify the scanning is started */
-  const [started,setStarted]=useState(false)
-  /* to change scannow button to scanning when scan started */
-  const [button,setButton]=useState( <button className='p-2 m-2 rounded primary-bg secondary-text' onClick={scan}>Scan Now</button>)
-  const [resultTxt,setResultTxt]=useState([])
+/* to change scannow button to scanning when scan started */
+const [button,setButton]=useState( <button className='p-2 m-2 rounded primary-bg secondary-text' onClick={scan}>Scan Now</button>)
   
 useEffect(()=>{
   console.log(resultTxt)
@@ -40,12 +41,12 @@ return (
       <video id="qr" className=' rounded-md md:w-2/4 md:h-full    mx-auto'  ></video>
     
 
-    <div>
-     {resultTxt!=""?resultTxt.map((r)=>{
+    <div className='w-full font-semibold text-sm overflow-x-scroll mx-auto my-16 bg-gray-200'>
+     {resultTxt.length!=1?resultTxt.map((r)=>{
 return (
-<h1>{r}</h1>
+<h1 className='my-4'>{r}</h1>
 )
-     }):null}
+     }):resultTxt[0]}
     </div>
     {button}
 </div>
