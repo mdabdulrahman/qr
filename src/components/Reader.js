@@ -35,9 +35,9 @@ useEffect(()=>{
 })
 return (
     <div>
-      <div className='container w-3/4 h-2/4 mx-auto text-center'>
+      <div className='container w-full h-full mx-auto text-center'>
         <h1 className='text-xl font-mono my-6'>QR Scanner</h1>
-        <div className='mx-auto w-[65%]  overflow-hidden'>
+        <div className=''>
       <video id="qr" className=' rounded-md md:w-2/4 md:h-full    mx-auto'  ></video>
     </div>
 
