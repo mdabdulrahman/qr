@@ -37,11 +37,11 @@ return (
     <div>
       <div className='container w-3/4 h-2/4 mx-auto text-center'>
         <h1 className='text-xl font-mono my-6'>QR Scanner</h1>
-        
+        <div className='h-11 overflow-hidden'>
       <video id="qr" className=' rounded-md md:w-2/4 md:h-full    mx-auto'  ></video>
-    
+    </div>
 
-    <div className='w-full font-semibold text-sm overflow-x-scroll mx-auto my-16 bg-gray-200'>
+    <div className='w-full font-semibold text-sm overflow-x-scroll mx-auto my-12 bg-gray-200'>
      {resultTxt.length!=1?resultTxt.map((r)=>{
 return (
 <h1 className='my-4'>{r}</h1>
