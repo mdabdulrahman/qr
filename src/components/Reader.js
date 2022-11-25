@@ -38,7 +38,7 @@ useEffect(()=>{
 let copytxt=(e)=>{
  
 
-navigator.clipboard.writeText(resultTxt)
+navigator.clipboard.writeText(resultTxt[0])
 alert("Text copied")
 }
 return (
