@@ -53,7 +53,7 @@ return (
     <div className='w-full absolute font-semibold text-sm overflow-x-scroll bottom-0 bg-gray-200'>
      {resultTxt.length!=1?resultTxt.map((r)=>{
 return (
-<h1 className=''>{r}</h1>
+<h1 className='my-4'>{r}</h1>
 )
      }):resultTxt[0]}
     </div>
