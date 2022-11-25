@@ -40,12 +40,12 @@ return (
     <div className='font-["Poppins"]'>
       <div className='container   w-full h-full mx-auto text-center'>
        
-        <h1 className='text-xl flex items-center gap-3 justify-center font-semibold my-4'>
+        <h1 className='text-xl flex items-center gap-2 justify-center font-semibold my-4'>
           <img src={icon} className='w-8'/>
           QR Scanner</h1>
         
         <div className=''>
-        <img className="absolute w-3/4 mx-11 my-11 z-10" src={load} alt="load"></img>
+        <img className="absolute w-3/4 mx-11 mt-11 z-10" src={load} alt="load"></img>
       <video id="qr" className='  md:w-2/4 md:h-full    mx-auto'  ></video>
     </div>
     
@@ -53,7 +53,7 @@ return (
     <div className='w-full absolute font-semibold text-sm overflow-x-scroll bottom-0 bg-gray-200'>
      {resultTxt.length!=1?resultTxt.map((r)=>{
 return (
-<h1 className='my-4'>{r}</h1>
+<h1 className=''>{r}</h1>
 )
      }):resultTxt[0]}
     </div>
