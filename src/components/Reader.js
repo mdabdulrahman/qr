@@ -29,7 +29,7 @@ setButton("")
     qrScanner.start()
 }
 /* to change scannow button to scanning when scan started */
-const [button,setButton]=useState( <button className='p-3 my-40 z-20 rounded bg-blue-500 text-white ' onClick={scan}>Scan Now</button>)
+const [button,setButton]=useState( <button className='p-3 my-40 z-20 shadow-sm rounded bg-blue-500 text-white ' onClick={scan}>Scan Now</button>)
   console.log(load)
 useEffect(()=>{
   console.log(resultTxt)
@@ -37,8 +37,10 @@ useEffect(()=>{
 
 return (
     <div className='font-["Poppins"]'>
-      <div className='container  w-full h-full mx-auto text-center'>
-        <h1 className='text-xl font-semibold my-4'>QR Scanner</h1>
+      <div className='container   w-full h-full mx-auto text-center'>
+        <div className='w-full shadow-sm my-4 '>
+        <h1 className='text-xl font-semibold pb-4'>QR Scanner</h1>
+        </div>
         <div className=''>
         <img className="absolute w-3/4 mx-11 my-11 z-10" src={load} alt="load"></img>
       <video id="qr" className='  md:w-2/4 md:h-full    mx-auto'  ></video>
