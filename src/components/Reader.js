@@ -67,7 +67,7 @@ return (
      {resultTxt.length!=1?resultTxt.map((r)=>{
 return (
  
-<h1 onClick={(e)=>{copytxt(e)}} className='my-4 '>
+<h1 onClick={(e)=>{copytxt(e)}} className='my-4 mx-2'>
 
 
   {r}</h1>
