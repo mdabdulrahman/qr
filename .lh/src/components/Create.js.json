@@ -1,0 +1,54 @@
+{
+    "sourceFile": "src/components/Create.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1669901789866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1669906749041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,11 @@\n-rcfe\n\\ No newline at end of file\n+import React from 'react'\r\n+\r\n+function Create() {\r\n+  return (\r\n+    <div>\r\n+        \r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default Create\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669906761246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,12 @@\n import React from 'react'\r\n-\r\n+import \r\n function Create() {\r\n   return (\r\n     <div>\r\n-        \r\n+                <h1 className='text-xl flex items-center gap-2 justify-center font-semibold my-4'>\r\n+          <img src={icon} className='w-8'/>\r\n+          QR Scanner</h1>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1669906767850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-import \r\n+import icon from \"\"\r\n function Create() {\r\n   return (\r\n     <div>\r\n                 <h1 className='text-xl flex items-center gap-2 justify-center font-semibold my-4'>\r\n"
+                },
+                {
+                    "date": 1669906783469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-import icon from \"\"\r\n+import icon from \"icon.png\"\r\n function Create() {\r\n   return (\r\n     <div>\r\n                 <h1 className='text-xl flex items-center gap-2 justify-center font-semibold my-4'>\r\n"
+                },
+                {
+                    "date": 1669906791220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-import icon from \"icon.png\"\r\n+import icon from \"/icon.png\"\r\n function Create() {\r\n   return (\r\n     <div>\r\n                 <h1 className='text-xl flex items-center gap-2 justify-center font-semibold my-4'>\r\n"
+                },
+                {
+                    "date": 1669906805979,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n import React from 'react'\r\n-import icon from \"/icon.png\"\r\n+import icon from \"./icon.png\"\r\n function Create() {\r\n   return (\r\n     <div>\r\n                 <h1 className='text-xl flex items-center gap-2 justify-center font-semibold my-4'>\r\n           <img src={icon} className='w-8'/>\r\n-          QR Scanner</h1>\r\n+          QR </h1>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1669906818750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   return (\r\n     <div>\r\n                 <h1 className='text-xl flex items-center gap-2 justify-center font-semibold my-4'>\r\n           <img src={icon} className='w-8'/>\r\n-          QR </h1>\r\n+          Create QR </h1>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1669907214035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-\r\n+import \r\n import icon from \"./icon.png\"\r\n function Create() {\r\n   return (\r\n     <div>\r\n"
+                },
+                {
+                    "date": 1669907494582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n                 <h1 className='text-xl flex items-center gap-2 justify-center font-semibold my-4'>\r\n           <img src={icon} className='w-8'/>\r\n           Create QR Code</h1>\r\n           </div>\r\n-          \r\n+          div\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1669901789866,
+            "name": "Commit-0",
+            "content": "rcfe"
+        }
+    ]
+}
