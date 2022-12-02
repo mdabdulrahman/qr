@@ -37,10 +37,13 @@ setdownloadbtn(
             <input ref={txt} type="text" className='focus:border-b-2  transition duration-[1000ms] focus:border-b-black focus:outline-none' placeholder='Your Text or URL'/>
           <button className='bg-blue-500 px-6 p-2 text-white ' onClick={()=>get()}>Get</button>
           </div>
-          <canvas ref={img} className='my-11 mx-auto' id="qr-code">
+          <div className='w-1/2 mx-auto'>
+          <canvas ref={img} className='my-11 mx-auto ' id="qr-code">
 
           </canvas>
+
 {downloadbtn}
+</div>
           </div>
     </div>
   )
