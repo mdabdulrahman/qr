@@ -12,7 +12,7 @@ function Create() {
             text:txt.current.value,
             radius:1.0,
             ecLevel:'H',
-            fill:"",
+            fill:"black",
             background:"white",
             size:128
         },
