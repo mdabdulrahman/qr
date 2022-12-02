@@ -32,7 +32,7 @@ setdownloadbtn(
           <img src={icon} className='w-8'/>
           Create QR Code</h1>
           </div>
-          <div className='mx-auto mt-28 w-1/2'>
+          <div className=' mt-28 w-1/2'>
           <div className='grid w-full gap-6   lg:mx-auto'>
             <input ref={txt} type="text" className='focus:border-b-2  transition duration-[1000ms] focus:border-b-black focus:outline-none' placeholder='Your Text or URL'/>
           <button className='bg-blue-500 px-6 p-2 text-white ' onClick={()=>get()}>Get</button>
