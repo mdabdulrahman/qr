@@ -18,10 +18,10 @@ function Create() {
         },
         document.querySelector('#qr-code')
     )
-console.log(img.current.toDataURL())
+console.log(img.current.toDataURL("image/jpeg"))
 setdownloadbtn(
   <div className='mx-auto w-1/2'>
-  <a href={img.current.toDataURL()} className="bg-red-400  text-white  px-6 py-3" download="qrcode">Download</a>
+  <a href={img.current.toDataURL("image/jpeg")} className="bg-red-400  text-white  px-6 py-3" download="qrcode">Download</a>
 </div>
 )
   }
